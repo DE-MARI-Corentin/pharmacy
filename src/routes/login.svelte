@@ -1,28 +1,43 @@
-<div class="w-full max-w-xs">
-    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                Username
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+<script>
+    import BandeauSeparateur from "$lib/pharma/BandeauSeparateur.svelte";
+    import Logo from "$lib/pharma/Logo.svelte";
+</script>
+
+<Logo />
+<BandeauSeparateur text="Se Connecter" />
+
+<div class="flex justify-center my-4 form_center">
+    <form >
+        <div class="mb-2">
+            <input class="input-connect" id="username" type="text" placeholder="Email">
         </div>
-        <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                Password
-            </label>
-            <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
-            <p class="text-red-500 text-xs italic">Please choose a password.</p>
+        <div class="mb-2">
+            <input class="input-connect" id="password" type="password" placeholder="Mot de passe">
         </div>
-        <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                Sign In
-            </button>
-            <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                Forgot Password?
-            </a>
+
+        <div class="mpo mb-8">
+            <a href="/">Mot de passe oublié ?</a>
+        </div>
+
+        <div>
+            <button class="btn-blue w100 mb-4">Connexion</button> 
+            <br/>
+            <button class="btn-green w100">Je n'ai pas de compte</button>
         </div>
     </form>
-    <p class="text-center text-gray-500 text-xs">
-        &copy;2020 Acme Corp. All rights reserved.
-    </p>
 </div>
+
+<style>
+
+.form_center
+{
+    margin-top: 64px;
+}
+
+.mpo
+{
+    text-align: right;
+    width: 100%;
+    font-size: medium;
+}
+</style>

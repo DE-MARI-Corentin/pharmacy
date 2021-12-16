@@ -9,6 +9,59 @@
 		@apply font-bold;
 	}
 }
+
+:root{
+	font-size: larger;
+
+	--pharma-separator-background-color: #EEEEEE;
+	--pharma-separator-border-color: #CCCCCC;
+
+	--pharma-input-background-color: #EEEEEE;
+	--pharma-input-border-color: #CCCCCC;
+
+	--pharma-button-background-color: #4285f4;
+	--pharma-button-border-color: #5684d1;
+
+	--pharma-button2-background-color: #0097a7;
+	--pharma-button2-border-color: #27909c;
+}
+
+input{
+	text-align: center;
+	border-radius: 8px;
+	border-width: 4px;
+	border-color: var(--pharma-input-border-color);
+	background-color: var(--pharma-input-background-color);
+	padding: 6px;
+}
+
+a{
+	color: blue;
+	text-decoration: underline;
+}
+
+button{
+	text-align: center;
+	border-width: 4px;
+	padding: 6px;
+}
+
+.btn-blue{
+	border-color: var(--pharma-button-border-color);
+	background-color: var(--pharma-button-background-color);
+	color:white;
+}
+.btn-green{
+	border-color: var(--pharma-button2-border-color);
+	background-color: var(--pharma-button2-background-color);
+	color:white;
+}
+
+.w100{
+	width: 100%;
+}
+
+
 /*
 :root {
 	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
