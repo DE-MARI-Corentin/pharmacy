@@ -1,13 +1,21 @@
-<script>
+<script context="module">
     import BandeauSeparateur from "$lib/pharma/BandeauSeparateur.svelte";
     import Logo from "$lib/pharma/Logo.svelte";
+
+    
+    function login()
+    {
+		document.cookie = "user='Thomas Magnum'";
+        location.assign('/');
+        console.log("LOGIN");
+    }
 </script>
 
 <Logo />
 <BandeauSeparateur text="Se Connecter" />
 
 <div class="flex justify-center my-4 form_center">
-    <form >
+    <form on:submit={login}>
         <div class="mb-2">
             <input class="input-connect" id="username" type="text" placeholder="Email">
         </div>
