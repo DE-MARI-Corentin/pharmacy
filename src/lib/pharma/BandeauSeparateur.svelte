@@ -1,9 +1,9 @@
 <script>
-    export let text = "Non Définis";
+    export let texte = "Non Définis";
 </script>
 
 <div class="w100">
-    <h2>{text}</h2>
+    <h2>{texte}</h2>
 </div>
 
 <style>

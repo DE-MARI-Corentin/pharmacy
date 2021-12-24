@@ -5,27 +5,22 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
 	import login from "./login.svelte";
+	import Logo from "$lib/pharma/Logo.svelte";
+    import { Helper } from "$lib/pharma/Helper.js";
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
+
+
+	onMount(async () => 
+	{
+		var c = Helper.parseCookie(document.cookie)
+		if("connected" in c && c["connected"] == "true")
+			goto("profile")
+		else
+			goto("login")
+	});
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Redirection..</title>
 </svelte:head>
-
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>

@@ -13,27 +13,34 @@
 :root{
 	font-size: larger;
 
-	--pharma-separator-background-color: #EEEEEE;
-	--pharma-separator-border-color: #CCCCCC;
+	--pharma-separator-background-color: #EEE;
+	--pharma-separator-border-color: #CCC;
 
-	--pharma-input-background-color: #EEEEEE;
-	--pharma-input-border-color: #CCCCCC;
+	--pharma-input-background-color: #EEE;
+	--pharma-input-border-color: #CCC;
+
+	--pharma-border-color-dark: #AAA;
 
 	--pharma-button-background-color: #4285f4;
 	--pharma-button-border-color: #5684d1;
 
 	--pharma-button2-background-color: #0097a7;
 	--pharma-button2-border-color: #27909c;
+
+	--pharma-headernav-background-color: black;
 }
 
-input{
+.input-big{
 	text-align: center;
 	border-radius: 8px;
 	border-width: 4px;
 	border-color: var(--pharma-input-border-color);
 	background-color: var(--pharma-input-background-color);
 	padding: 6px;
+	width: 100%;
 }
+
+
 
 a{
 	color: blue;
