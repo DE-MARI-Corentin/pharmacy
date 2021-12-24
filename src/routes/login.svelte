@@ -1,4 +1,4 @@
-<script>
+<script context="module">
     import BandeauSeparateur from "$lib/pharma/BandeauSeparateur.svelte";
     import Logo from "$lib/pharma/Logo.svelte";
 
@@ -24,7 +24,7 @@
 <BandeauSeparateur texte="Se Connecter" />
 
 <div class="flex justify-center my-4 form_center">
-    <form >
+    <form on:submit={login}>
         <div class="mb-2">
             <input class="input-big" id="username" type="text" placeholder="Email">
         </div>
