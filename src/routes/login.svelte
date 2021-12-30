@@ -24,7 +24,7 @@
 <BandeauSeparateur texte="Se Connecter" />
 
 <div class="flex justify-center my-4 form_center">
-    <form on:submit={login}>
+    <form on:submit={connect}>
         <div class="mb-2">
             <input class="input-big" id="username" type="text" placeholder="Email">
         </div>

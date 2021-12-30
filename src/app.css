@@ -28,6 +28,10 @@
 	--pharma-button2-border-color: #27909c;
 
 	--pharma-headernav-background-color: black;
+
+	--pharma-card-f-background-color: #f4cccc;
+	--pharma-card-m-background-color: #bfd7ff;
+	--pharma-card-x-border-color: #AAA;
 }
 
 .input-big{

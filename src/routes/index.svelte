@@ -9,6 +9,11 @@
 
 	onMount(async () => 
 	{
+		if(document.cookie == '')
+		{
+			goto("login")
+			return
+		}
 		var c = Helper.parseCookie(document.cookie)
 		if("connected" in c && c["connected"] == "true")
 			goto("profile")

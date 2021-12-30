@@ -5,7 +5,7 @@
 </script>
 
 <button on:click={action()}>
-    <div class="img-center"><img src={image}></div>
+    <div class="img-center"><img src={image} alt=""></div>
     <b>{texte}</b>
 </button>
 

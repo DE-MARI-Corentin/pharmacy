@@ -1,6 +1,7 @@
 <script>
     import BandeauSeparateur from "$lib/pharma/BandeauSeparateur.svelte";
     import BigButton from "$lib/pharma/BigButton.svelte";
+    import AnimalCard from "$lib/pharma/AnimalCard.svelte";
     import { Helper } from "$lib/pharma/Helper.js";
 
     import { goto } from '$app/navigation';
@@ -8,14 +9,27 @@
 import HeaderNavigation from "$lib/pharma/HeaderNavigation.svelte";
     
     var user = Helper.getDefaultUser()
+    var img = null
 
 	onMount(async () => 
 	{
         user = Helper.getUser(document.cookie)
+        img = user.image
     })
 </script>
 
-<HeaderNavigation />
+
+<HeaderNavigation texte="Mes Animaux" profileImg={img} back="profile" />
+
+<div class="my-4 mx-4">
+
+    <AnimalCard animal="{{nom: 'Floda', race: 'Berger Allemand', age: 7, image: 'src/images/icon_dog.png', sexe: 'f'}}" warning="Veuillez prendre rendez-vous pour son rappel."/>
+    <AnimalCard animal="{{nom: 'Raspoutine', race: 'Sibérien', age: 12, image: 'src/images/icon_cat.png', sexe: 'm'}}"/>
+    <AnimalCard animal="{{nom: 'Cléopâtre', race: 'Sphynx', age: 1, image: 'src/images/icon_cat.png', sexe: 'f'}}"/>
+    <AnimalCard animal="{{nom: 'Jeesus', race: `Une sorte d'oiseau`, age: 0, image: 'src/images/icon_cat.png', sexe: ''}}"/>
+
+    <button class="btn-blue w100 mb-4" style="border-radius: 32px">Ajouter un Animal</button> 
+</div>
 
 <svelte:head>
 	<title>Mes Animaux</title>
