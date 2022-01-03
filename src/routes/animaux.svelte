@@ -25,10 +25,10 @@
 
 <div class="my-4 mx-4">
 
-    <AnimalCard animal="{{nom: 'Floda', race: 'Berger Allemand', age: 7, image: 'src/images/icon_dog.png', sexe: 'f'}}" warning="Veuillez prendre rendez-vous pour son rappel."/>
-    <AnimalCard animal="{{nom: 'Raspoutine', race: 'Sibérien', age: 12, image: 'src/images/icon_cat.png', sexe: 'm'}}"/>
-    <AnimalCard animal="{{nom: 'Cléopâtre', race: 'Sphynx', age: 1, image: 'src/images/icon_cat.png', sexe: 'f'}}"/>
-    <AnimalCard animal="{{nom: 'Jeesus', race: `Une sorte d'oiseau`, age: 0, image: 'src/images/icon_cat.png', sexe: ''}}"/>
+    <AnimalCard animal="{{nom: 'Floda', race: 'Berger Allemand', age: 7, image: 'src/images/icon_dog.png', sexe: 'f', type: 'chien'}}" warning="Veuillez prendre rendez-vous pour son rappel."/>
+    <AnimalCard animal="{{nom: 'Raspoutine', race: 'Sibérien', age: 12, image: 'src/images/icon_cat.png', sexe: 'm', type: 'chat'}}"/>
+    <AnimalCard animal="{{nom: 'Cléopâtre', race: 'Sphynx', age: 1, image: 'src/images/icon_cat.png', sexe: 'f', type: 'chat'}}"/>
+    <AnimalCard animal="{{nom: 'Jeesus', race: `Une sorte d'oiseau`, age: 1, image: 'src/images/icon_bird.png', sexe: 'f', type: 'pigeon'}}"/>
 
     <button class="btn-blue w100 mb-4" style="border-radius: 32px">Ajouter un Animal</button> 
 </div>
