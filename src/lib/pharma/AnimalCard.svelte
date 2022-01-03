@@ -29,10 +29,12 @@
         <p>{age}</p>
     </div>
     <img class="icon" src={animal.image}/>
-    {#if warning}<div class="warning mx-2 flex">
-        <img class="warnimg" src="src/images/icon_warning.png"/>
-        <p class="mx-2">{warning}</p>
-    </div>{/if}
+    {#if warning}
+        <div class="warning mx-2 flex">
+            <img class="warnimg" src="src/images/icon_warning.png"/>
+            <p class="mx-2">{warning}</p>
+        </div>
+    {/if}
 </div>
 
 <style>

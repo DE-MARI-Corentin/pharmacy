@@ -6,20 +6,22 @@
 
     import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
-import HeaderNavigation from "$lib/pharma/HeaderNavigation.svelte";
+    import HeaderNavigation from "$lib/pharma/HeaderNavigation.svelte";
     
     var user = Helper.getDefaultUser()
     var img = null
+    var title = ""
 
 	onMount(async () => 
 	{
         user = Helper.getUser(document.cookie)
         img = user.image
+        title = document.title
     })
 </script>
 
 
-<HeaderNavigation texte="Mes Animaux" profileImg={img} back="profile" />
+<HeaderNavigation texte={title} profileImg={img} back="profile" />
 
 <div class="my-4 mx-4">
 

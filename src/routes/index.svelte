@@ -1,5 +1,4 @@
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+<script>
 	import login from "./login.svelte";
 	import Logo from "$lib/pharma/Logo.svelte";
     import { Helper } from "$lib/pharma/Helper.js";

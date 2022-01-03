@@ -16,9 +16,7 @@
     })
 
     function gotoAnimaux(){goto("animaux")}
-    function gotoRDV(){goto("about")}
-    function gotoContact(){goto("about")}
-    function gotoStore(){goto("about")}
+    function gotoRDV(){goto("rdv")}
 
     function disconnect(){ document.cookie = "connected=false"; goto("/") }
 
@@ -46,7 +44,7 @@
 
 <div class="buttons-center">
     <div class="m-2"><BigButton action={gotoAnimaux} image="src/images/icon_paw.png" texte="Mes Animaux"/></div>
-    <div class="m-2"><BigButton image="src/images/icon_calendar.png" texte="Rendez-Vous"/></div>
+    <div class="m-2"><BigButton action={gotoRDV} image="src/images/icon_calendar.png" texte="Rendez-Vous"/></div>
     <div class="m-2"><BigButton image="src/images/icon_phone.png" texte="Contacter"/></div>
     <div class="m-2"><BigButton image="src/images/icon_cart.png" texte="Boutique"/></div>
 </div>

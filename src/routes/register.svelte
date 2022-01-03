@@ -8,7 +8,7 @@
     function dejaUnCompte(){goto(`/login`)}
     function inscription()
     {
-        goto(`/`)
+        goto(`/login`)
     }
 </script>
 
