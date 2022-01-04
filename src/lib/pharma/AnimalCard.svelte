@@ -4,7 +4,7 @@
     export let animal =
     {
         sexe: null,
-        image: "src/images/icon_dog.png",
+        image: "images/icon_dog.png",
         nom: "Inconnu",
         race: "Race Inconnue",
         age: 0,
@@ -42,7 +42,7 @@
     <img class="icon" src={animal.image}/>
     {#if warning}
         <div class="warning mx-2 flex">
-            <img class="warnimg" src="src/images/icon_warning.png"/>
+            <img class="warnimg" src="images/icon_warning.png"/>
             <p class="mx-2">{warning}</p>
         </div>
     {/if}

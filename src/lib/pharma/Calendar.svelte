@@ -4,7 +4,7 @@
 
     function gotoDetail() {
         document.cookie = "sexeAnimal=f"
-        document.cookie = "imageAnimal=src/images/icon_dog.png"
+        document.cookie = "imageAnimal=images/icon_dog.png"
         document.cookie = "nomAnimal=Floda"
         document.cookie = "raceAnimal=Berger Allemand"
         document.cookie = "ageAnimal=7"
@@ -172,8 +172,11 @@
 </script>
 
 <div class="calendar-wrapper">
-    <button id="btnPrev" type="button">←</button>
-    <button id="btnNext" type="button">→</button>
+    <div class="flex justify-between">
+        <button id="btnPrev" type="button">←</button>
+        <button class="btn-blue w-48 mb-4" style="border-radius: 32px">Nouveau RDV</button>
+        <button id="btnNext" type="button">→</button>
+    </div>
     <div id="divCal"></div>
 </div>
 <BandeauSeparateur texte="Prochains Rendez-Vous"/>

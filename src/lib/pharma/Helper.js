@@ -9,7 +9,7 @@ export class Helper
         return acc;
         }, {});
 
-    static getDefaultUser(){ return { nom:"", prenom:"", tel:"", adresse:"", image:"src/images/harold.png" } }
+    static getDefaultUser(){ return { nom:"", prenom:"", tel:"", adresse:"", image:"images/harold.png" } }
     static getUser( cookies )
     {
         var obj = this.getDefaultUser()
@@ -20,7 +20,7 @@ export class Helper
         if( "adresse" in c ) obj["adresse"] = c["adresse"]
         return obj
     }
-    static getDefaultAnimal(){ return { sexeAnimal:"", imageAnimal:"src/images/icon_dog.png", nomAnimal:"Inconnu", raceAnimal:"Race Inconnue", ageAnimal:0, typeAnimal:"Inconnu" } }
+    static getDefaultAnimal(){ return { sexeAnimal:"", imageAnimal:"images/icon_dog.png", nomAnimal:"Inconnu", raceAnimal:"Race Inconnue", ageAnimal:0, typeAnimal:"Inconnu" } }
     static getAnimal(cookies){
         var obj = this.getDefaultAnimal()
         const c = this.parseCookie( cookies )

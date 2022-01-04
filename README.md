@@ -33,6 +33,7 @@ Before creating a production version of your app, install an [adapter](https://k
 
 ```bash
 npm run build
+puis pour afficher npm run preview
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.

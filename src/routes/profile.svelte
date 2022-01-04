@@ -44,14 +44,14 @@
 <p class="my-4" style="text-align: center">{bonquoi} {user.prenom} !</p>
 
 <div class="buttons-center">
-    <div class="m-2"><BigButton action={gotoAnimaux} image="src/images/icon_paw.png" texte="Mes Animaux"/></div>
-    <div class="m-2"><BigButton action={gotoRDV} image="src/images/icon_calendar.png" texte="Rendez-Vous"/></div>
-    <div class="m-2"><BigButton image="src/images/icon_phone.png" texte="Contacter"/></div>
-    <div class="m-2"><BigButton action={gotoShop} image="src/images/icon_cart.png" texte="Boutique"/></div>
+    <div class="m-2"><BigButton action={gotoAnimaux} image="images/icon_paw.png" texte="Mes Animaux"/></div>
+    <div class="m-2"><BigButton action={gotoRDV} image="images/icon_calendar.png" texte="Rendez-Vous"/></div>
+    <div class="m-2"><BigButton image="images/icon_phone.png" texte="Contacter"/></div>
+    <div class="m-2"><BigButton action={gotoShop} image="images/icon_cart.png" texte="Boutique"/></div>
 </div>
 
 <div class="backdiv m-2">
-    <img on:click={disconnect} src="src/images/icon_back.png" width=25px>
+    <img on:click={disconnect} src="images/icon_back.png" width=25px>
 </div>
 
 </div>

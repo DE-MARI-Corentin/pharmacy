@@ -13,46 +13,23 @@ import { children } from "svelte/internal";
     var user = Helper.getDefaultUser()
     var img = null
     var title = ""
-    var animal = Helper.getDefaultAnimal()
-    var years = 0
-    var backgroundColor = "white";
 
-    function gotoRdv(){
-        goto("rdv");
+    function gotoAnimaux(){
+        goto("animaux");
     }
-
     onMount(async () => {
-        animal = Helper.getAnimal(document.cookie)
         user = Helper.getUser(document.cookie)
         img = user.image
         title = document.title
-        console.log(animal)
-        years = 2022 - animal.ageAnimal
-        if (animal.sexeAnimal === "m")
-            backgroundColor = "var(--pharma-card-m-background-color)"
-        else if (animal.sexeAnimal === "f")
-            backgroundColor = "var(--pharma-card-f-background-color)"
     })
-
-
-    let age = !isNaN(animal.ageAnimal) && animal.ageAnimal > 0 ? animal.ageAnimal + " " + (animal.ageAnimal > 1 ? "ans" : "an") : "Inconnu"
-
 
 </script>
 
 
 <HeaderNavigation texte={title} profileImg={img} back="animaux"/>
-<div class="card mb-2" style="background-color: {backgroundColor}">
 
-    <div class="mx-8 my-4">
-        <h2>{animal.nomAnimal}</h2>
-        <p>{animal.raceAnimal}</p>
-        <br/>
-        <p>{animal.ageAnimal} ans</p>
-    </div>
-    <img class="icon" src={animal.imageAnimal}/>
-</div>
-<form class="max-w-sm">
+
+<div class="flex flex2 md:items-center mb-6">
 
     <div class="flex">
         <div class="">
@@ -62,7 +39,7 @@ import { children } from "svelte/internal";
         </div>
         <div class="">
             <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                   id="inline-full-name" type="text" value="{animal.nomAnimal}">
+                   id="inline-full-name" type="text" placeholder="Entrez son prenom">
         </div>
     </div>
     <div class="flex">
@@ -74,7 +51,7 @@ import { children } from "svelte/internal";
         <div class="">
             <SearchBar data={["Persan","Sacré de Birmanie" , "Chartreux","Siamois","Bengal","Siberien", "Rottweiler","Berger allemand","Golden Retriever","Labrador", "Carlin","Bouledogue" ,"Caniche","Yorkshire" , "Rat d'égout" , "Rat brun" ,"Rat noir",
             "Pur-sang", "Arabe", "Percheron","Frison", "Lapin tête de lion","Lapin bélier","Lapin angora nain","Lapin nain polonais", "Moineau domestique","Mésange","Rouge-gorge","Corneille noire","Pie bavarde","Merle noir","Étourneau sansonnet",
-            "Moineau domestique","Mésange charbonnière","Mésange bleue","Rougequeue noir","Rougegorge familier","Pigeon biset","Pigeon ramier", "Moine de Saxe"]} value={animal.raceAnimal}/>
+            "Moineau domestique","Mésange charbonnière","Mésange bleue","Rougequeue noir","Rougegorge familier","Pigeon biset","Pigeon ramier", "Moine de Saxe"]} value="Recherche"/>
         </div>
     </div>
     <div class="flex">
@@ -84,9 +61,11 @@ import { children } from "svelte/internal";
             </label>
         </div>
         <div class="">
-            <SearchBar data={["Chien","Chat","Rat", "Cochon d'Inde", "Hamster", "Chinchilla", "Dègue du Chili", "Gerbille", "Souris","Cheval", "Ane", "Chèvre naine", "Oiseau", "Lapin"]} value={animal.typeAnimal}/>
+            <SearchBar data={["Chien","Chat","Rat", "Cochon d'Inde", "Hamster", "Chinchilla", "Dègue du Chili", "Gerbille", "Souris","Cheval", "Ane", "Chèvre naine", "Oiseau", "Lapin"]} value="Recherche"/>
         </div>
     </div>
+    <div class="divide-y divide-dashed" >
+
     <div class="flex">
         <div class="">
             <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
@@ -98,11 +77,7 @@ import { children } from "svelte/internal";
                 <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="grid-state">
                     {#each [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022] as year}
-                        {#if years === year }
-                            <option selected>{year}</option>
-                        {:else }
                             <option>{year}</option>
-                        {/if}
                     {/each}
 
 
@@ -115,22 +90,17 @@ import { children } from "svelte/internal";
             </div>
         </div>
     </div>
-    <div class="flex">
-        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">Sexe de
+    <div class="">
+        <label class="flex block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">Sexe de
             l'animal</label>
-        <div class="">
+        <div class="flex">
             <label class="inline-flex items-center">
-                {#if animal.sexeAnimal == "m"}<input type="radio" class="form-radio" name="accountType" value="male"
-                                                     checked>
-                {:else}<input type="radio" class="form-radio" name="accountType" value="male">
-                {/if}
+                <input type="radio" class="form-radio" name="accountType" value="male">
                 <span class="ml-2">Male</span>
             </label>
             <label class="inline-flex items-center ml-6">
-                {#if animal.sexeAnimal == "f"}<input type="radio" class="form-radio" name="accountType" value="female"
-                                                     checked>
-                {:else}<input type="radio" class="form-radio" name="accountType" value="female">
-                {/if}            <span class="ml-2">Femelle</span>
+                <input type="radio" class="form-radio" name="accountType" value="female">
+                <span class="ml-2">Femelle</span>
             </label>
         </div>
     </div>
@@ -140,16 +110,25 @@ import { children } from "svelte/internal";
             <span class="ml-2">Puçeage</span>
         </label>
     </div>
-</form>
-<button class="btn-blue w100 mb-4" style="border-radius: 32px" on:click="{gotoRdv}">Prendre Rendez-Vous</button>
+</div>
+</div>
+<button class="btn-blue w100 mb-4" style="border-radius: 32px" on:click="{gotoAnimaux}">Valider</button>
 
 
 <svelte:head>
-    <title>Page de l'animal</title>
+    <title>Ajouter un animal</title>
 </svelte:head>
 
 
 <style>
+    .flex2 {
+        display: flex;
+        margin-bottom: 2em;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 4em;
+    }
     .flex {
         display: flex;
         margin-bottom: 2em;

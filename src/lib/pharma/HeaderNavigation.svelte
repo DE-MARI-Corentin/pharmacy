@@ -12,7 +12,7 @@
 
 <div class="w100 navbar">
     <div class="center"><h2>{texte}</h2></div>
-    <div class="left"><button on:click="{gotoBack}" class="btn"><img src="src/images/icon_back2.png" style="filter: invert(1);"/></button></div>
+    <div class="left"><button on:click="{gotoBack}" class="btn"><img src="images/icon_back2.png" style="filter: invert(1);"/></button></div>
     <div class="right"><button on:click="{gotoProfile}" class="btn"><img class="rnd" src={profileImg}/></button></div>
 </div>
 
