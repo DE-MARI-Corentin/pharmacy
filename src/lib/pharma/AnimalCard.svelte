@@ -21,6 +21,8 @@
     else if(animal.sexe == "f")
         backgroundColor = "var(--pharma-card-f-background-color)"
 
+
+
     function gotoDetail(){
         document.cookie = "sexeAnimal="+animal.sexe
         document.cookie = "imageAnimal="+animal.image
@@ -77,6 +79,7 @@
         height: 70px;
         position: absolute;
     }
+
 
     h2
     {

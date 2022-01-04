@@ -18,7 +18,7 @@
     function gotoAnimaux(){goto("animaux")}
     function gotoRDV(){goto("rdv")}
     function gotoShop(){goto("shop")}
-
+    function gotoContact(){goto("contact")}
     function disconnect(){ document.cookie = "connected=false"; goto("/") }
 
 </script>
@@ -46,7 +46,7 @@
 <div class="buttons-center">
     <div class="m-2"><BigButton action={gotoAnimaux} image="images/icon_paw.png" texte="Mes Animaux"/></div>
     <div class="m-2"><BigButton action={gotoRDV} image="images/icon_calendar.png" texte="Rendez-Vous"/></div>
-    <div class="m-2"><BigButton image="images/icon_phone.png" texte="Contacter"/></div>
+    <div class="m-2"><BigButton action={gotoContact} image="images/icon_phone.png" texte="Contacter"/></div>
     <div class="m-2"><BigButton action={gotoShop} image="images/icon_cart.png" texte="Boutique"/></div>
 </div>
 
@@ -56,6 +56,7 @@
 
 </div>
 <style>
+
     .backdiv
     {
         position: absolute;

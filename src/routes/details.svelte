@@ -20,6 +20,9 @@ import { children } from "svelte/internal";
     function gotoRdv(){
         goto("rdv");
     }
+    function gotoDelete(){
+        goto("delete")
+    }
 
     onMount(async () => {
         animal = Helper.getAnimal(document.cookie)
@@ -50,6 +53,7 @@ import { children } from "svelte/internal";
         <br/>
         <p>{animal.ageAnimal} ans</p>
     </div>
+    <img class="icon2" src="images/cross.png" on:click="{gotoDelete}">
     <img class="icon" src={animal.imageAnimal}/>
 </div>
 <form class="max-w-sm">
@@ -171,7 +175,13 @@ import { children } from "svelte/internal";
         width: 100%;
         font-size: 12px;
     }
-
+    .icon2
+    {
+        top: 5px;
+        right: 5px;
+        height: 15px;
+        position: absolute;
+    }
     .icon {
         top: 32px;
         right: 32px;
