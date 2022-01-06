@@ -56,6 +56,8 @@ import { children } from "svelte/internal";
     <img class="icon2" src="images/cross.png" on:click="{gotoDelete}">
     <img class="icon" src={animal.imageAnimal}/>
 </div>
+<div class="flex flex2 md:items-center mb-6">
+
 <form class="max-w-sm">
 
     <div class="flex">
@@ -119,7 +121,7 @@ import { children } from "svelte/internal";
             </div>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex2">
         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">Sexe de
             l'animal</label>
         <div class="">
@@ -145,6 +147,7 @@ import { children } from "svelte/internal";
         </label>
     </div>
 </form>
+</div>
 <button class="btn-blue w100 mb-4" style="border-radius: 32px" on:click="{gotoRdv}">Prendre Rendez-Vous</button>
 
 
@@ -154,10 +157,19 @@ import { children } from "svelte/internal";
 
 
 <style>
+    .flex2 {
+        display: flex;
+        margin-bottom: 2em;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2em;
+    }
     .flex {
         display: flex;
         margin-bottom: 2em;
         justify-content: space-evenly;
+        flex-direction: column;
     }
 
     .card {
