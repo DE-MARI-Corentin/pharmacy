@@ -34,11 +34,27 @@ import { children } from "svelte/internal";
 <HeaderNavigation texte={title} profileImg={img} back="profile"/>
 
 <BandeauSeparateur texte="Numéros" />
-
+<div class="flex items-center">
+    <img src="images/phone.jpg" class="icon">
+    <div>
+        <strong>Ligne Fix : </strong><span>04.01.02.03.04</span>
+        <strong>Ligne Mobile : </strong><span>06.01.02.03.04</span>
+    </div>
+</div>
 <BandeauSeparateur texte="Adresse postale" />
-
+<div class="flex items-center">
+    <div>
+        <strong>Rue : </strong><span>4 Rue du petit pois</span>
+        <strong>Ville : </strong><span>Avignon - 84000</span>
+    </div>
+</div>
 <BandeauSeparateur texte="Email" />
-
+<div class="flex items-center">
+    <img src="images/email.jpg" class="icon">
+    <div>
+        <strong>Coucou@coucou.com</strong>
+    </div>
+</div>
 <div class="">
 
 </div>
@@ -46,3 +62,10 @@ import { children } from "svelte/internal";
 <svelte:head>
     <title>Nous contacter</title>
 </svelte:head>
+
+<style>
+    .icon
+    {
+        height: 25px;
+    }
+</style>
