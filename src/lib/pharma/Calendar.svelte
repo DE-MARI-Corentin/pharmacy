@@ -180,7 +180,7 @@
     <div id="divCal"></div>
 </div>
 <BandeauSeparateur texte="Prochains Rendez-Vous"/>
-<div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
+<div class="w-full bg-white rounded-lg shadow-lg">
     <ul class="divide-y-2 divide-gray-400">
         <li class="p-3 hover:bg-blue-600 hover:text-blue-200">
             <b><u>Jeudi 27 Janvier 2022 à 14H30</u></b><br>

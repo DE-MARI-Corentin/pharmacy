@@ -26,6 +26,3 @@
 
 <HeaderNavigation texte={title} profileImg={img} back="profile"/>
 <Calendar/>
-
-<style>
-</style>
